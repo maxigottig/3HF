@@ -124,7 +124,7 @@ h6 {
 
 /**VERSION 2**/
 
-.ventana {
+/*.ventana {
   background-color: #154360;
   width: 30%;
   color: #ffff;
@@ -155,7 +155,72 @@ h6 {
   cursor: pointer;
   font-size: 20px;
   color: #fff;
+}*/
+
+/**VERSION 3**/
+
+.ventana {
+  background-color: #154360;
+  width: 30%;
+  color: #ffffff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding: 33px;
+  min-height: 250px;
+  border-radius: 22px;
+  position: fixed;
+  z-index: 1000;
+  left: 34%;
+  top: 35%;
+  opacity: 0;
+  transform: scale(0) translateY(100px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
 }
+
+.ventana.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+#cerrar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+#cerrar:hover {
+  transform: scale(1.2);
+  color: #ff6961;
+}
+
+.contenido {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.contenido h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contenido p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
 
 
 /* PHP Email Form Messages
