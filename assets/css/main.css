@@ -20,11 +20,11 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #747272; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #154360; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --contrast-color: #f7f0f0; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #000213;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -704,7 +704,11 @@ h6 {
   margin-bottom: 5px;
 }
 
-.footer .footer-newsletter .newsletter-form {
+.footer .footer-newsletter{
+  color: #fff;
+}
+
+/**.footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
   padding: 6px 8px;
@@ -745,7 +749,7 @@ h6 {
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
+}*/
 
 .footer .copyright {
   padding: 30px 0;
@@ -866,7 +870,7 @@ h6 {
 }
 
 .page-title .heading {
-  padding: 80px 0;
+  padding: 60px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -1168,6 +1172,9 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+
+
 .services .service-item {
   background-color: var(--surface-color);
   text-align: center;
@@ -1267,8 +1274,9 @@ section,
   border-radius: 5px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid var(--contrast-color);
-  color: var(--contrast-color);
+  border: 2px solid #fff;
+  /**color: var(--contrast-color);*/
+  color: #fff;
 }
 
 .call-to-action .cta-btn:hover {

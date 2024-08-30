@@ -36,6 +36,7 @@
   ======================================================== -->
 </head>
 
+
 <body class="index-page">
   
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -47,7 +48,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#about">Quienes somos</a></li>
           <li><a href="#historia">Historia</a></li>
           <li><a href="#services">Servicios</a></li>
@@ -232,11 +233,16 @@
       </div>
 
     </section><!-- /Features Section -->
-    <div class="ventana" id="vent">
+    <!--<div class="ventana" id="vent">
       <div id="cerrar" class="contenido">&times;<a href="javascript:cerrar()"></a></div>
       bienvenidos
-    </div>
+    </div>-->
     
+    <div class="ventana" id="vent">
+      <span id="cerrar">&times;</span>
+      <div class="contenido">Bienvenidos</div> <!-- Contenedor del mensaje -->
+    </div>
+
     <!-- Services Section -->
     <section id="services" class="services section">
 
@@ -249,13 +255,13 @@
       <div class="container">
 
         <div class="row gy-4">
-
+          
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="-Montaje de celdas de 13.2 y 33kv -Montaje de seccionadores -Interruptores y seccionadores de imtemperie">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<p>✓ Montaje de celdas de 13.2 y 33kv</p><p>✓ Montaje de seccionadores</p><p>✓ Interruptores y seccionadores de intemperie</p><p>✓ Aislamiento, regulación y ensayos para puesta en servicio</p><p>✓ Mantenimiento preventivo de subestaciones y tableros de media tensión</p><p>✓ Interruptores de generadores (hasta 20hA)</p>">
                 <h3>Montaje de equipamiento de media tensión</h3>
               </a>
             </div>
@@ -266,7 +272,7 @@
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="-Interruptores -Seccionadores -Transformadores de medida -Descargadores ">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<p>✓ Interruptores</p><p>✓ Seccionadores</p><p>✓ Transformadores de medida</p><p>✓ Descargadores</p><p>✓ Aislamiento, regulación y ensayos de puesta en servicio</p>">
                 <h3>Supervisión de montaje de equipos de alta tensión (hasta 500kv)</h3>
               </a>
             </div>
@@ -277,7 +283,7 @@
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="Cajas de accionamiento de interruptores de media y alta tensión">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<p>✓ Cajas de accionamiento de interruptores de media y alta tensión</p><p>✓ Polos de interruptores de hasta 132hV (hidráulicos, neumáticos y a resortes)</p><p>✓ Celdas de media tensión</p><p>✓ Interruptores de media tensión</p>">
                 <h3>Instalaciones acondicionadas para reparaciones y mantenimientos</h3>
               </a>
             </div>
@@ -288,7 +294,7 @@
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="Extracción y trasvase de gas SF6 de equipamiento de media y alta tensión">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<p>✓ Extracción y trasvase de gas SF6 de equipamiento de media y alta tensión</p><p>✓ Almacenamiento en cilindros normalizados para disposición final</p><p>✓ Asesoramiento para disposición de SF6 de equipamiento fuera de servicio</p>">
                 <h3>Extracción y manipulación de Gas SF6</h3>
               </a>
             </div>
@@ -299,7 +305,7 @@
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="Ensayos de pre-comisionamiento y puesta en servicio de interruptores, seccionadores, celdas y transformadores de medida">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<b>Ensayos de pre-comisionamiento y puesta en servicio de:</b><p>✓ Interruptores</p><p>✓ Seccionadores</p><p>✓ Celdas</p><p>✓ Transformadores de medida</p>">
                 <h3>Ensayos eléctricos</h3>
               </a>
             </div>
@@ -310,7 +316,7 @@
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <a href="javascript:abrir()" class="open-modal" data-mensaje="Analizador de interruptores MT y AT, micro-ohmímetro digital, meghómetro digital, probador de aislación 80kVCA-120kVcc y camara termográfica.">
+              <a href="javascript:abrir()" class="open-modal" data-mensaje="<p>✓ Analiador de interruptoress MT y AT</p><p>✓ Micro-ohmímetro Digital</p><p>✓ Meghómetro Digital</p><p>✓ Probador de aislación 80kVCA - 120hVcc</p><p>✓ Cámara termográfica</p>">
                 <h3>Equipamiento propio para ensayos</h3>
               </a>
             </div>
@@ -663,7 +669,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="https://formsubmit.co/maxigottig1985@gmail.com" method="POST" />
+            <form action="https://formsubmit.co/comunicaciones@3hfenergia.com" method="POST" />
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -721,7 +727,7 @@
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Links</h4>
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#hero"> Home</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#about"> Quienes somos</a></li>
