@@ -61,6 +61,9 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
@@ -106,11 +109,31 @@ h6 {
   opacity: 0;
   transform: scale(0) translateY(100px);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+  box-sizing: border-box;
 }
 
 .ventana.show {
   opacity: 1;
   transform: scale(1) translateY(0);
+}
+
+@media (max-width: 767px) {
+  .ventana {
+    width: 80%;  /* La ventana ocupará el 80% del ancho de la pantalla */
+    left: 10%;   /* Centramos la ventana ajustando el `left` */
+    top: 20%;    /* Ajusta la altura */
+    padding: 20px;  /* Reducimos el padding */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ventana {
+    width: 50%;  /* Ocupará la mitad del ancho de la pantalla */
+    left: 25%;   /* Centrado */
+    top: 25%;
+    padding: 30px;
+  }
 }
 
 #cerrar {
@@ -132,6 +155,12 @@ h6 {
   color: #ff6961;
 }
 
+@media (max-width: 767px) {
+  #cerrar {
+    font-size: 20px;  /* Botón de cerrar más pequeño en pantallas pequeñas */
+  }
+}
+
 .contenido {
   font-family: 'Arial', sans-serif;
   font-size: 18px;
@@ -139,6 +168,18 @@ h6 {
   margin-top: 20px;
   line-height: 1.5;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .contenido {
+    font-size: 16px; /* Reducimos el tamaño del texto en pantallas pequeñas */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contenido {
+    font-size: 17px; /* Ajustamos el tamaño del texto en pantallas medianas */
+  }
 }
 
 .contenido h2 {
@@ -247,6 +288,9 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
+
+
+
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -296,61 +340,7 @@ h6 {
     color: var(--nav-hover-color);
   }
 
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: 0.3s;
-    border-radius: 0;
-    z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    background-color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
+  
 }
 
 /* Navmenu - Mobile */
@@ -428,26 +418,7 @@ h6 {
     transform: rotate(180deg);
   }
 
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
+  
 
   .mobile-nav-active {
     overflow: hidden;
@@ -822,7 +793,7 @@ section,
   }
 }*/
 
-.hero {
+/*.hero {
   background: rgb(0, 24, 41);
   background: linear-gradient(180deg, rgb(0, 38, 65) 0%, rgba(255,255,255,1) 62%);
 }
@@ -880,11 +851,13 @@ section,
   text-align: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   font: var(--default-font);
+  font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-content h2 {
   font-size: 80px;
   margin: 0;
+  
 }
 
 
@@ -892,10 +865,123 @@ section,
   font-size: 50px;
   margin-top: 10px;
 }
+*/
+
+.hero {
+  background: rgb(0, 24, 41);
+  background: linear-gradient(180deg, rgb(0, 38, 65) 0%, rgba(255, 255, 255, 1) 62%);
+  margin: 0;
+  padding: 0;
+}
+
+.slider-frame {
+  width: 100%; /* Se ajusta al ancho de la pantalla */
+  height: 100vh; /* La altura se ajusta al 100% del alto de la ventana */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 16s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+  position: relative;
+}
+
+.slider-frame img {
+  width: 100%; /* Imagen responsiva */
+  height: 100vh; /* Imagen ocupa toda la altura de la ventana */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  z-index: 1;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
+}
+
+.text-content h2 {
+  font-size: 5vw; /* Tamaño del texto adaptable */
+  margin: 0;
+}
+
+.text-content p {
+  font-size: 2.5vw; /* Tamaño del texto adaptable */
+  margin-top: 10px;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 6vw;
+  }
+  
+  .text-content p {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 7vw;
+  }
+  
+  .text-content p {
+    font-size: 4vw;
+  }
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+  0% { margin-left: 0%; }
+  20% { margin-left: 0%; }
+
+  25% { margin-left: -100%; }
+  45% { margin-left: -100%; }
+
+  50% { margin-left: -200%; }
+  70% { margin-left: -200%; }
+
+  75% { margin-left: -300%; }
+  95% { margin-left: -300%; }
+}
+
 
 .main h1{
   font-size: 60px;
   margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .main h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 30px;
+  }
 }
 
 /*--------------------------------------------------------------
