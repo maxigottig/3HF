@@ -1,5 +1,5 @@
 # 3HF Energía Activa
-![Logo de 3HF](assets/3HF_IsoLogo_1_transparent.png)
+![Logo de 3HF](C:\Users\Toshiba\Documents\Proyectos\3HF\assets\img\3HF_IsoLogo_1_transparent.png)
 
 **3HF Energía Activa** es un sitio web creado para mostrar los servicios y soluciones de la empresa en el sector de la energía. El enfoque principal es brindar información clara sobre los productos, proyectos y la filosofía de la empresa, destacando la innovación y el compromiso con la sostenibilidad.
 
