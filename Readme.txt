@@ -1,6 +1,22 @@
-Thanks for downloading this template!
+# 3HF Energía Activa
+![Logo de 3HF](assets/3HF_IsoLogo_1_transparent.png)
 
-Template Name: Gp
-Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+**3HF Energía Activa** es un sitio web creado para mostrar los servicios y soluciones de la empresa en el sector de la energía. El enfoque principal es brindar información clara sobre los productos, proyectos y la filosofía de la empresa, destacando la innovación y el compromiso con la sostenibilidad.
+
+## Demo
+Puedes visitar el sitio web en: [maxigottig.github.io/3HF/](https://maxigottig.github.io/3HF/)
+
+## Características principales
+
+- **Hero Section con Carrusel:** El sitio cuenta con un encabezado principal que incluye un carrusel de imágenes para destacar la energía activa de 3HF.
+- **Navegación Transparente:** Un diseño moderno con un navbar transparente que se integra perfectamente con el contenido visual.
+- **Slogan Principal:** "3HF ENERGÍA ACTIVA" como frase central para reflejar la visión de la empresa.
+- **Interfaz Amigable:** Diseño limpio y responsivo, pensado para una experiencia óptima en distintos dispositivos.
+
+## Tecnologías Utilizadas
+
+- **HTML5**: Estructura del sitio.
+- **CSS3**: Estilos y animaciones.
+- **JavaScript**: Comportamientos dinámicos como el carrusel de imágenes.
+- **JSON**: Configuración de algunos aspectos del sitio.
+
