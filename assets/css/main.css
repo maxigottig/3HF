@@ -1077,6 +1077,18 @@ section,
   transform: translateY(-10px);
 }
 
+@media (max-width: 991px) {
+  .hide-responsive {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hide-responsive {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
