@@ -785,7 +785,7 @@ section,
 }
 
 .text-content h2 {
-  font-size: 5vw;
+  font-size: 4vw;
   margin: 0;
   font-family: var(--main-font);
 }
@@ -1214,6 +1214,7 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
+  text-align: justify;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
