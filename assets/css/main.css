@@ -791,7 +791,7 @@ section,
 }
 
 .text-content p {
-  font-size: 4vw;
+  font-size: 3vw;
   margin-top: 10px;
   font-family: var(--main-font);
 }
