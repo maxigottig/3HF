@@ -344,6 +344,57 @@ h6 {
     color: var(--nav-hover-color);
   }
 
+  /*-----------------------------------------
+  MENU DESPLEGABLE PARA INSTITUCIONAL
+  /*-----------------------------------------
+
+/* --- ESTILOS DEL DESPLEGABLE TRANSPARENTE --- */
+
+.navmenu .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  /* Fondo transparente (blanco al 70%) */
+  background: rgba(255, 255, 255, 0.007); 
+  
+  /* Efecto de desenfoque (opcional, estilo moderno) */
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Borde sutil para que no se pierda */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Color de los links dentro del desplegable */
+.navmenu .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333; /* Color de letra oscuro para que contraste */
+  font-weight: 500;
+}
+
+/* Efecto al pasar el mouse por los items internos */
+.navmenu .dropdown ul a:hover {
+  background: rgba(255, 255, 255, 0.4); /* Se aclara un poco más al pasar el mouse */
+  color: #000;
+}
+
+/* Mostrar el menú al hacer hover */
+.navmenu .dropdown:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+
   
 }
 
