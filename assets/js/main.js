@@ -210,3 +210,29 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('#navmenu');
+
+  // Abrir/Cerrar menú principal
+  if (mobileNavToggle) {
+    mobileNavToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('mobile-nav-active');
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x'); // Cambia el icono a una "X"
+    });
+  }
+
+  // Controlar el desplegable (Dropdown)
+  const dropdowns = document.querySelectorAll('.navmenu .dropdown > a');
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+      if (window.innerWidth < 992) {
+        e.preventDefault(); // Evita que el link navegue
+        this.parentNode.classList.toggle('active'); // Abre el submenú
+      }
+    });
+  });
+});

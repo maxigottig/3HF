@@ -1653,3 +1653,46 @@ section,
   width: 60px;
   height: 60px;
 }
+
+
+
+/* --- RESPONSIVE MENU --- */
+
+@media (max-width: 991px) {
+  /* Convertimos la lista en una columna vertical */
+  .navmenu ul {
+    display: none; /* Se oculta por defecto en móvil */
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    border-radius: 8px;
+  }
+
+  /* Clase para mostrar el menú cuando se active con JS */
+  .navmenu.mobile-nav-active ul {
+    display: block;
+  }
+
+  /* Estilos para el Dropdown en móvil */
+  .navmenu .dropdown ul {
+    position: static; /* Ya no flota sobre el contenido */
+    display: none;    /* Se oculta hasta que se haga clic */
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.05); /* Fondo sutil para diferenciarlo */
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  /* Clase para abrir el desplegable al hacer clic */
+  .navmenu .dropdown.active > ul {
+    display: block;
+  }
+}
