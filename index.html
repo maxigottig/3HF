@@ -65,12 +65,12 @@
             <li><a href="#portfolio">Galería</a></li>
             
             <li class="dropdown">
-              <a href="#"><span>Institucional</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="codigo-de-etica.html">Código de Ética</a></li>
-                <li><a href="politica-de-integridad.html">Política de Integridad</a></li>
-                <li><a href="codigo-de-conducta.html">Código de Conducta</a></li>
-                <li><a href="politica-de-sustentabilidad.html">Política de Sustentabilidad</a></li>
+              <a href="#"><span>Institucional</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="codigo-de-etica.html">Código de Ética</a></li>
+                  <li><a href="politica-de-integridad.html">Política de Integridad</a></li>
+                  <li><a href="codigo-de-conducta.html">Código de Conducta</a></li>
+                  <li><a href="politica-de-sustentabilidad.html">Política de Sustentabilidad</a></li>
               </ul>
             </li>
           </ul>
@@ -897,7 +897,70 @@ document.getElementById("cerrar").onclick = function() {
 }
 
 </script>
+  <script>
+  window.addEventListener('load', function() {
+    // 1. Buscamos el enlace "Institucional"
+    const dropdownLink = document.querySelector('.navmenu .dropdown > a');
+    
+    if (dropdownLink) {
+      // Usamos onclick directo para tener máxima prioridad
+      dropdownLink.onclick = function(e) {
+        // Solo si el menú móvil está abierto (clase que pone tu plantilla en el body)
+        if (document.body.classList.contains('mobile-nav-active')) {
+          e.preventDefault();
+          e.stopImmediatePropagation(); // Detiene cualquier otro script de la plantilla
+          
+          // Buscamos el submenú (el <ul> que sigue al enlace)
+          const subMenu = this.nextElementSibling || this.parentElement.querySelector('ul');
+          
+          if (subMenu) {
+            // Alternamos la visibilidad
+            if (subMenu.classList.contains('submenu-visible')) {
+              subMenu.classList.remove('submenu-visible');
+              subMenu.style.display = 'none';
+            } else {
+              subMenu.classList.add('submenu-visible');
+              subMenu.style.display = 'block';
+            }
+          }
+          console.log("Clic en Institucional forzado");
+        }
+      };
+    }
+  });
+</script>
+  <script>
+  document.addEventListener('click', function(e) {
+    // 1. Buscamos si el clic fue en "Institucional"
+    const link = e.target.closest('.navmenu .dropdown > a');
+    
+    if (link && window.innerWidth < 1200) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
 
+      const subMenu = link.parentNode.querySelector('ul');
+      
+      if (subMenu) {
+        // Si ya está abierto, lo cerramos
+        if (subMenu.getAttribute('data-estado') === 'abierto') {
+          subMenu.style.display = 'none';
+          subMenu.style.opacity = '0';
+          subMenu.style.visibility = 'hidden';
+          subMenu.setAttribute('data-estado', 'cerrado');
+        } 
+        // Si está cerrado, lo forzamos a mostrarse
+        else {
+          subMenu.style.setProperty('display', 'block', 'important');
+          subMenu.style.setProperty('opacity', '1', 'important');
+          subMenu.style.setProperty('visibility', 'visible', 'important');
+          subMenu.style.setProperty('position', 'static', 'important');
+          subMenu.style.setProperty('background', 'rgba(255,255,255,0.05)', 'important');
+          subMenu.setAttribute('data-estado', 'abierto');
+        }
+      }
+    }
+  });
+  </script>
 </body>
-
+  
 </html>

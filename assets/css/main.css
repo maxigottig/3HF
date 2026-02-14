@@ -22,7 +22,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #747272; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #151515; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #154360; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #154360; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #f7f0f0; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -481,7 +481,7 @@ h6 {
 
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
-    position: absolute;
+    position: static;
     font-size: 32px;
     top: 15px;
     right: 15px;
@@ -895,7 +895,7 @@ section,
 
 
 .main h1{
-  font-size: 60px;
+  font-size: 40px;
   margin: 0;
   font-family: var(--main-font);
 }
@@ -909,13 +909,13 @@ section,
 
 @media (max-width: 768px) {
   .main h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .main h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -1657,42 +1657,47 @@ section,
 
 
 /* --- RESPONSIVE MENU --- */
-
-@media (max-width: 991px) {
-  /* Convertimos la lista en una columna vertical */
-  .navmenu ul {
-    display: none; /* Se oculta por defecto en móvil */
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    border-radius: 8px;
-  }
-
-  /* Clase para mostrar el menú cuando se active con JS */
-  .navmenu.mobile-nav-active ul {
-    display: block;
-  }
-
-  /* Estilos para el Dropdown en móvil */
+/* --- SUBMENÚ FIJO EN MÓVIL --- */
+/* ESTO SOLO AFECTA A MÓVILES (Menos de 1200px) */
+@media (max-width: 1199px) {
+  
+  /* 1. Hacemos que el submenú de Institucional sea una lista FIJA */
   .navmenu .dropdown ul {
-    position: static; /* Ya no flota sobre el contenido */
-    display: none;    /* Se oculta hasta que se haga clic */
-    margin: 10px 20px;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 1;
-    visibility: visible;
-    background: rgba(0, 0, 0, 0.05); /* Fondo sutil para diferenciarlo */
-    backdrop-filter: none;
-    box-shadow: none;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important; /* Lo saca del modo flotante */
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    margin: 10px 0 10px 20px !important;
+    padding: 10px !important;
+    border-left: 2px solid #000b70 !important; /* Línea amarilla 3HF */
+    box-shadow: none !important;
   }
 
-  /* Clase para abrir el desplegable al hacer clic */
-  .navmenu .dropdown.active > ul {
-    display: block;
+  /* 2. Forzamos que los textos sean blancos y visibles (sin hover) */
+  .navmenu .dropdown ul li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .navmenu .dropdown ul li a {
+    color: #01082c !important; /* Texto blanco fijo */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    padding: 10px 0 !important;
+    font-size: 15px !important;
+    transition: none !important;
+  }
+
+  /* 3. Opcional: Quitamos la flechita en móvil porque ya está desplegado */
+  .navmenu .dropdown > a i {
+    display: none !important;
   }
 }
+
+/* LA VERSIÓN DESKTOP (Más de 1200px) SE MANTIENE IGUAL */
+/* No agregamos código para desktop, así el archivo main.js y el CSS 
+   original de la plantilla siguen manejando el efecto desplegable. */

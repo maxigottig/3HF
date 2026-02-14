@@ -212,27 +212,30 @@
 })();
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-  const navMenu = document.querySelector('#navmenu');
+/**
+ * Corrección manual para el desplegable Institucional en móviles
+ */
+/*(function() {
+  "use strict";
 
-  // Abrir/Cerrar menú principal
-  if (mobileNavToggle) {
-    mobileNavToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('mobile-nav-active');
-      this.classList.toggle('bi-list');
-      this.classList.toggle('bi-x'); // Cambia el icono a una "X"
-    });
-  }
+  const institucionalToggle = function() {
+    // Buscamos el enlace de Institucional
+    const dropdownLink = document.querySelector('.navmenu .dropdown > a');
+    
+    if (dropdownLink) {
+      dropdownLink.addEventListener('click', function(e) {
+        // Solo actuar si el menú móvil está activo (clase en el body)
+        if (document.body.classList.contains('mobile-nav-active')) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Alternar la clase que abre el submenú
+          this.parentElement.classList.toggle('dropdown-active');
+        }
+      });
+    }
+  };
 
-  // Controlar el desplegable (Dropdown)
-  const dropdowns = document.querySelectorAll('.navmenu .dropdown > a');
-  dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('click', function(e) {
-      if (window.innerWidth < 992) {
-        e.preventDefault(); // Evita que el link navegue
-        this.parentNode.classList.toggle('active'); // Abre el submenú
-      }
-    });
-  });
-});
+  // Ejecutar cuando el DOM esté listo
+  window.addEventListener('load', institucionalToggle);
+})(); */
